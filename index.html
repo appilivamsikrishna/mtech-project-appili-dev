@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTech Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Appili Vamsi Krishna - MTech Project - IIT Madras</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Video Section -->
+      <section class="video-section">
+        <h2>Project Video</h2>
+        <video controls>
+          <source src="./assets/mtech-project-video.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- PDF Download Section -->
+      <section class="pdf-section">
+        <h2>Project Document</h2>
+        <iframe
+          src="./assets/AE20M002_MTech_Thesis.pdf"
+          width="100%"
+          height="500px"
+        ></iframe>
+        <a href="./assets/AE20M002_MTech_Thesis.pdf" download>Download PDF</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+      <p>© <span id="year"></span> IIT Madras | MTech Project</p>
+    </footer>
+
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Insert the current year into the footer
+      document.getElementById("year").textContent = currentYear;
+    </script>
+  </body>
+</html>
