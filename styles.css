@@ -48,6 +48,25 @@ video {
   border: 1px solid #ccc;
 }
 
+/* Download Button */
+.download-button {
+  display: inline-block;
+  background-color: #800000; /* IIT Madras maroon */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #5a0000; /* Darker shade for hover effect */
+}
+
 /* Footer */
 footer {
   background-color: #333;
@@ -58,4 +77,71 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* General Styles for Mobile */
+@media (max-width: 768px) {
+  /* Main Container */
+  main {
+    padding: 10px;
+  }
+
+  /* Video Section */
+  video {
+    width: 100%;
+    max-width: 100%; /* Ensure video takes full width on small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* PDF Section */
+  .pdf-section iframe {
+    width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  /* Header */
+  header h1 {
+    font-size: 1.5rem; /* Reduce font size for small screens */
+    padding: 10px;
+  }
+
+  /* Section Headers */
+  h2 {
+    font-size: 1.2rem; /* Adjust section heading size */
+  }
+
+  /* Download Button */
+  .download-button {
+    padding: 10px 15px;
+    font-size: 14px; /* Make button slightly smaller */
+    margin-top: 15px;
+  }
+
+  /* Footer */
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* Styles for Tablets (portrait and landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  video {
+    width: 100%;
+    max-width: 90%;
+    height: auto; /* Ensure proper scaling */
+  }
+
+  .pdf-section iframe {
+    width: 100%;
+    height: 400px; /* Adjust height for tablet screens */
+  }
+
+  .download-button {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
 }
