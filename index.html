@@ -22,29 +22,33 @@
       <!-- Video Section -->
       <section class="video-section">
         <h2>Project Video</h2>
-        <video controls>
+        <video controls autoplay muted>
           <source src="./assets/mtech-project-video.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <p>for audio, kindly unmute the video</p>
       </section>
 
       <!-- PDF Download Section -->
       <section class="pdf-section">
         <h2>Project Document</h2>
+        <button id="download-btn" class="download-button">
+          Download MTech Project Report
+        </button>
         <iframe
           src="./assets/AE20M002_MTech_Thesis.pdf"
           width="100%"
           height="500px"
         ></iframe>
-        <button id="download-btn" class="download-button">
-          Download MTech Project Report
-        </button>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>© <span id="year"></span> IIT Madras | MTech Project</p>
+      <p>
+        © <span id="year"></span> Appili Vamsi Krishna | MTech Project | IIT
+        Madras
+      </p>
     </footer>
 
     <!-- SweetAlert and JavaScript -->
@@ -82,6 +86,20 @@
             confirmButtonText: "OK",
           });
         });
+    </script>
+
+    <script>
+      // Function to adjust iframe height to be 110% of A4 aspect ratio
+      function adjustIframeHeight() {
+        const iframe = document.querySelector(".pdf-section iframe");
+        const width = iframe.offsetWidth;
+        const aspectRatio = 1.414; // A4 aspect ratio
+        iframe.style.height = (width / aspectRatio) * 1.1 + "px"; // 110% of A4 height
+      }
+
+      // Call the function on window load and resize
+      window.addEventListener("load", adjustIframeHeight);
+      window.addEventListener("resize", adjustIframeHeight);
     </script>
   </body>
 </html>

@@ -50,7 +50,7 @@ video {
 
 /* Download Button */
 .download-button {
-  display: inline-block;
+  display: block; /* Make the button a block element */
   background-color: #800000; /* IIT Madras maroon */
   color: #fff;
   padding: 10px 20px;
@@ -60,7 +60,7 @@ video {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
+  margin: 20px auto; /* Center the button */
 }
 
 .download-button:hover {
